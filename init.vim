@@ -33,7 +33,7 @@ Plug 'neomake/neomake'
 "Plug 'vim-syntastic/syntastic'
 
 "Tag Management
-Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ludovicchabant/vim-gutentags'
 
 "Auto Complete Brackets and such
 "Plug 'Townk/vim-autoclose'
