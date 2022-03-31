@@ -2,7 +2,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 "REPL Utility
 "Plug 'hkupty/iron.nvim'
-Plug 'hkupty/iron.nvim', {'branch': 'legacy'}
+"Plug 'hkupty/iron.nvim', {'branch': 'legacy'}
+Plug 'hkupty/iron.nvim', { 'branch': 'direct-invoke' }
 
 "Python virtualenv
 Plug 'plytophogy/vim-virtualenv'
@@ -117,9 +118,15 @@ autocmd BufLeave term://* stopinsert
 
 augroup filetype_python
     autocmd!
-    autocmd Filetype python nmap \lr :IronRepl<CR>
-    autocmd Filetype python nmap \t <Plug>(iron-send-motion)
-    autocmd Filetype python vmap \t <Plug>(iron-send-motion)
+    autocmd FileType python set nospell
+    autocmd FileType python nmap <localleader>t    <Plug>(iron-send-motion)
+    autocmd FileType python vmap <localleader>v    <Plug>(iron-visual-send)
+    autocmd FileType python nmap <localleader>r    <Plug>(iron-repeat-cmd)
+    autocmd FileType python nmap <localleader>l    <Plug>(iron-send-line)
+    autocmd FileType python nmap <localleader><CR> <Plug>(iron-cr)
+    autocmd FileType python nmap <localleader>i    <Plug>(iron-interrupt)
+    autocmd FileType python nmap <localleader>q    <Plug>(iron-exit)
+    autocmd FileType python nmap <localleader>c    <Plug>(iron-clear)
 augroup END
 
 
