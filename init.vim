@@ -121,7 +121,7 @@ augroup filetype_python
     autocmd FileType python set nospell
     autocmd Filetype python nmap \lr :IronRepl<CR>
     autocmd Filetype python nmap \t <Plug>(iron-send-motion)
-    autocmd Filetype python vmap \t <Plug>(iron-send-motion)
+    autocmd Filetype python vmap \v <Plug>(iron-send-motion)
     "autocmd FileType python nmap <localleader>t    <Plug>(iron-send-motion)
     "autocmd FileType python vmap <localleader>v    <Plug>(iron-visual-send)
     "autocmd FileType python nmap <localleader>r    <Plug>(iron-repeat-cmd)
